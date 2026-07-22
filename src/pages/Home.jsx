@@ -51,7 +51,7 @@ const Home = () => {
 								key={social.name}
 								className="
 								group
-								bg-[#e5f1fa]
+								bg-[#edf7ff]
 								border-[3px]
 								border-black
 								shadow-[6px_6px_0px_#86afce]
