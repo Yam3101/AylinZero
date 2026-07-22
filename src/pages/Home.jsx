@@ -38,10 +38,10 @@ const Home = () => {
 							@AylinZero
 						</h1>
 
-						<p className="mt-6 text-lg leading-8 text-neutral-700 max-w-md">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget
-							lacus in libero egestas facilisis. Sed eget lacus in libero
-							egestas facilisis.
+						<p className="mt-6 text-2xl leading-8 text-neutral-700 max-w-md Caveat-Brush">
+							Hallo, soy Aylin ꒰｡ര ᎑ ര｡ ꒱ tu vtuber con energía infinita y
+							mucha torpeza, hablo mucho y grito de vez en cuando, si no me das
+							tu follow te morderé. 🐻‍❄️🌨️
 						</p>
 					</div>
 
@@ -51,7 +51,7 @@ const Home = () => {
 								key={social.name}
 								className="
 								group
-								bg-[#dceefb]
+								bg-[#e5f1fa]
 								border-[3px]
 								border-black
 								shadow-[6px_6px_0px_#86afce]
