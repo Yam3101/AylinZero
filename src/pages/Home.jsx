@@ -55,12 +55,13 @@ const Home = () => {
 					</div>
 
 					<div className="flex flex-col justify-center items-center gap-3">
-						{socials.map((social) => (
+						{socials.map((social, index) => (
 							<button
 								key={social.name}
 								type="button"
 								onClick={() => openLink(social.url)}
-								className="
+								className={`
+									animated${index + 4}
 									group
 									bg-[#edf7ff]
 									border-[3px]
@@ -82,9 +83,10 @@ const Home = () => {
 									cursor-pointer
 									sm:w-full
 									w-9/10
-								"
+								`}
 							>
 								<span className="text-xl duration-200">{social.icon}</span>
+
 								{social.name}
 							</button>
 						))}
