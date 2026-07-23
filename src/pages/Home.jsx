@@ -7,18 +7,22 @@ const socials = [
 	{
 		name: "Twitch",
 		icon: <IoLogoTwitch />,
+		url: "https://www.twitch.tv/aylinzero/about",
 	},
 	{
 		name: "Twitter",
 		icon: <FiTwitter />,
+		url: "https://x.com/AylinZero",
 	},
 	{
 		name: "TikTok",
 		icon: <PiTiktokLogo />,
+		url: "https://www.tiktok.com/@aylinzerovt",
 	},
 	{
 		name: "Discord",
 		icon: <TbBrandDiscord />,
+		url: "/",
 	},
 ];
 
@@ -47,9 +51,14 @@ const Home = () => {
 
 					<div className="flex flex-col justify-center gap-5">
 						{socials.map((social) => (
-							// biome-ignore lint/a11y/useButtonType: <explanation>
 							<button
 								key={social.name}
+								type="button"
+								onClick={() => {
+									if (social.url) {
+										window.open(social.url, "_blank", "noopener,noreferrer");
+									}
+								}}
 								className="
 								group
 								bg-[#edf7ff]
@@ -69,6 +78,7 @@ const Home = () => {
 								justify-center
 								gap-4
 								Caveat-Brush
+								cursor-pointer
 								"
 							>
 								<span className="text-3xl duration-200">{social.icon}</span>
