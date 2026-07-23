@@ -43,11 +43,11 @@ const Home = () => {
 							className="w-40 rounded-full object-cover border-3 border-black shadow-[5px_5px_0px_#86afce]"
 						/>
 
-						<h1 className="sm:text-4xl text-3xl mt-8 Caveat-Brush">
+						<h1 className="sm:text-4xl text-3xl mt-2 Caveat-Brush">
 							@AylinZero
 						</h1>
 
-						<p className="mt-6 text-lg leading-8 text-neutral-700 max-w-md Caveat-Brush">
+						<p className="mt-2 text-lg leading-8 text-neutral-700 max-w-md Caveat-Brush">
 							Hallo, soy Aylin ꒰｡ര ᎑ ര｡ ꒱ tu vtuber con energía infinita y
 							mucha torpeza, hablo mucho y grito de vez en cuando, si no me das
 							tu follow te morderé. 🐻‍❄️🌨️
