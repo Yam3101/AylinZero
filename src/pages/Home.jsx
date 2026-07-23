@@ -35,7 +35,7 @@ const Home = () => {
 	return (
 		<div className="min-h-screen bg-degraded1 flex justify-center items-center px-6 py-10">
 			<div className="bg-white border-3 border-black shadow-[10px_10px_0px_#000] rounded-md sm:w-3/4 w-full max-w-4xl overflow-hidden">
-				<div className="grid md:grid-cols-2 gap-12 p-10">
+				<div className="grid md:grid-cols-2 gap-10 p-10">
 					<div className="flex flex-col justify-center">
 						<img
 							src="/pfpAylin.jpg"
