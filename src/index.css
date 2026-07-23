@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .bg-degraded1 {
-	background: linear-gradient(to right, #b1e1e9, #f2e4f9);
+	background: linear-gradient(135deg, #b1e1e9 0%, #f2e4f9 100%);
 }
 
 @font-face {
@@ -29,21 +29,36 @@
 }
 
 .yellowtail {
-	/* biome-ignore lint/a11y/useGenericFontNames: <explanation> */
-	font-family: "Yellowtail";
+	font-family: "Yellowtail", cursive;
 }
 
 .Caveat-Brush {
-	/* biome-ignore lint/a11y/useGenericFontNames: <explanation> */
-	font-family: "Caveat-Brush";
+	font-family: "Caveat-Brush", cursive;
 }
 
 .PlaywriteID {
-	/* biome-ignore lint/a11y/useGenericFontNames: <explanation> */
-	font-family: "PlaywriteID";
+	font-family: "PlaywriteID", cursive;
 }
 
 .ReenieBeanie {
-	/* biome-ignore lint/a11y/useGenericFontNames: <explanation> */
-	font-family: "ReenieBeanie";
+	font-family: "ReenieBeanie", cursive;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+}
+
+button {
+	outline: none;
+}
+
+button:focus-visible {
+	outline: 3px solid #86afce;
+	outline-offset: 4px;
+}
+
+img {
+	display: block;
+	max-width: 100%;
 }
