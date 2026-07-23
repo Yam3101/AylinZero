@@ -34,7 +34,7 @@ const Home = () => {
 							className="w-28 sm:w-36 md:w-40 rounded-full border-[3px] border-black object-cover shadow-[5px_5px_0px_#86afce]"
 						/>
 
-						<h1 className="yellowtail mt-6 text-4xl sm:text-5xl lg:text-6xl">
+						<h1 className="PlaywriteID mt-6 text-4xl sm:text-5xl lg:text-6xl">
 							@AylinZero
 						</h1>
 
@@ -58,8 +58,8 @@ const Home = () => {
 								border-black
 								rounded-md
 								shadow-[6px_6px_0px_#86afce]
-								hover:translate-x-[6px]
-								hover:translate-y-[6px]
+								hover:translate-x-1.5
+								hover:translate-y-1.5
 								hover:shadow-none
 								transition-all
 								duration-200
