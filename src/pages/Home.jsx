@@ -43,18 +43,18 @@ const Home = () => {
 							className="w-40 rounded-full object-cover border-3 border-black shadow-[5px_5px_0px_#86afce]"
 						/>
 
-						<h1 className="sm:text-6xl text-5xl mt-8 Caveat-Brush">
+						<h1 className="sm:text-4xl text-3xl mt-8 Caveat-Brush">
 							@AylinZero
 						</h1>
 
-						<p className="mt-6 text-2xl leading-8 text-neutral-700 max-w-md Caveat-Brush">
+						<p className="mt-6 text-lg leading-8 text-neutral-700 max-w-md Caveat-Brush">
 							Hallo, soy Aylin ꒰｡ര ᎑ ര｡ ꒱ tu vtuber con energía infinita y
 							mucha torpeza, hablo mucho y grito de vez en cuando, si no me das
 							tu follow te morderé. 🐻‍❄️🌨️
 						</p>
 					</div>
 
-					<div className="flex flex-col justify-center gap-5">
+					<div className="flex flex-col justify-center items-center gap-3">
 						{socials.map((social) => (
 							<button
 								key={social.name}
@@ -70,8 +70,8 @@ const Home = () => {
 									hover:translate-y-1
 									hover:shadow-none
 									duration-200
-									sm:text-4xl
-									text-3xl
+									sm:text-2xl
+									text-xl
 									py-5
 									rounded-md
 									flex
@@ -80,9 +80,10 @@ const Home = () => {
 									gap-4
 									Caveat-Brush
 									cursor-pointer
+									w-2/3
 								"
 							>
-								<span className="text-3xl duration-200">{social.icon}</span>
+								<span className="text-xl duration-200">{social.icon}</span>
 								{social.name}
 							</button>
 						))}
