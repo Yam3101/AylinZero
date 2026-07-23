@@ -7,22 +7,31 @@ const socials = [
 	{
 		name: "Twitch",
 		icon: <IoLogoTwitch />,
+		url: "https://www.twitch.tv/aylinzero",
 	},
 	{
 		name: "Twitter",
 		icon: <FiTwitter />,
+		url: "https://x.com/AylinZero",
 	},
 	{
 		name: "TikTok",
 		icon: <PiTiktokLogo />,
+		url: "https://www.tiktok.com/@aylinzerovt",
 	},
 	{
 		name: "Discord",
 		icon: <TbBrandDiscord />,
+		url: "",
 	},
 ];
 
 const Home = () => {
+	const openLink = (url) => {
+		if (!url) return;
+		window.open(url, "_blank", "noopener,noreferrer");
+	};
+
 	return (
 		<div className="min-h-screen bg-degraded1 flex justify-center items-center px-6 py-10">
 			<div className="bg-white border-3 border-black shadow-[10px_10px_0px_#000] rounded-md w-full max-w-5xl overflow-hidden">
@@ -33,6 +42,7 @@ const Home = () => {
 							alt="AylinZero"
 							className="w-40 rounded-full object-cover border-3 border-black shadow-[5px_5px_0px_#86afce]"
 						/>
+
 						<h1 className="sm:text-6xl text-5xl mt-8 Caveat-Brush">
 							@AylinZero
 						</h1>
@@ -46,32 +56,33 @@ const Home = () => {
 
 					<div className="flex flex-col justify-center gap-5">
 						{socials.map((social) => (
-							// biome-ignore lint/a11y/useButtonType: <explanation>
 							<button
 								key={social.name}
+								type="button"
+								onClick={() => openLink(social.url)}
 								className="
-								group
-								bg-[#edf7ff]
-								border-[3px]
-								border-black
-								shadow-[6px_6px_0px_#86afce]
-								hover:translate-x-1
-								hover:translate-y-1
-								hover:shadow-none
-								duration-200
-								sm:text-4xl
-								text-3xl
-								py-5
-								rounded-md
-								flex
-								items-center
-								justify-center
-								gap-4
-								Caveat-Brush
+									group
+									bg-[#edf7ff]
+									border-[3px]
+									border-black
+									shadow-[6px_6px_0px_#86afce]
+									hover:translate-x-1
+									hover:translate-y-1
+									hover:shadow-none
+									duration-200
+									sm:text-4xl
+									text-3xl
+									py-5
+									rounded-md
+									flex
+									items-center
+									justify-center
+									gap-4
+									Caveat-Brush
+									cursor-pointer
 								"
 							>
 								<span className="text-3xl duration-200">{social.icon}</span>
-
 								{social.name}
 							</button>
 						))}
