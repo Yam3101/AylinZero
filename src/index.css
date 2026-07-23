@@ -4,21 +4,11 @@
 	background: linear-gradient(135deg, #b1e1e9 0%, #f2e4f9 100%);
 }
 
+/* ---------- Fuentes ---------- */
+
 @font-face {
 	font-family: "Caveat-Brush";
 	src: url("/fonts/CaveatBrush-Regular.woff2") format("woff2");
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "PlaywriteID";
-	src: url("/fonts/PlaywriteID-VariableFont_wght.woff2") format("woff2");
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "ReenieBeanie";
-	src: url("/fonts/ReenieBeanie-Regular.woff2") format("woff2");
 	font-display: swap;
 }
 
@@ -36,29 +26,140 @@
 	font-family: "Caveat-Brush", cursive;
 }
 
-.PlaywriteID {
-	font-family: "PlaywriteID", cursive;
+/* ---------- Card ---------- */
+
+.card-main {
+	width: min(900px, 100%);
+	background: white;
+	border: 3px solid black;
+	border-radius: 10px;
+	box-shadow: 10px 10px 0 black;
+	overflow: hidden;
 }
 
-.ReenieBeanie {
-	font-family: "ReenieBeanie", cursive;
+.card-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3rem;
+	padding: 3rem;
+}
+
+.profile-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.profile-image {
+	width: 170px;
+	border-radius: 999px;
+	border: 3px solid black;
+	box-shadow: 5px 5px 0 #86afce;
+}
+
+.profile-title {
+	margin-top: 1.5rem;
+	font-size: clamp(3rem, 5vw, 4.8rem);
+	line-height: 1;
+}
+
+.profile-description {
+	margin-top: 1.5rem;
+	font-size: clamp(1.4rem, 2vw, 2rem);
+	line-height: 1.45;
+	color: rgb(70, 70, 70);
+	max-width: 450px;
+}
+
+.socials-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.social-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+
+	width: 100%;
+
+	padding: 1rem;
+
+	font-size: clamp(1.8rem, 2vw, 2.8rem);
+
+	background: #edf7ff;
+
+	border: 3px solid black;
+
+	border-radius: 8px;
+
+	box-shadow: 6px 6px 0 #86afce;
+
+	cursor: pointer;
+
+	transition: 0.2s;
+}
+
+.social-button:hover {
+	transform: translate(6px, 6px);
+	box-shadow: none;
+}
+
+.social-icon {
+	font-size: 1.3em;
+	display: flex;
+	align-items: center;
+}
+
+.bottom-bar {
+	height: 18px;
+	background: #86afce;
+	border-top: 3px solid black;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 768px) {
+	.card-content {
+		grid-template-columns: 1fr;
+		padding: 2rem;
+		gap: 2rem;
+	}
+
+	.profile-section {
+		align-items: center;
+		text-align: center;
+	}
+
+	.profile-image {
+		width: 130px;
+	}
+
+	.social-button {
+		font-size: 2rem;
+	}
+}
+
+/* ---------- Base ---------- */
+
+html,
+body,
+#root {
+	min-height: 100%;
 }
 
 body {
 	margin: 0;
-	min-width: 320px;
-}
-
-button {
-	outline: none;
-}
-
-button:focus-visible {
-	outline: 3px solid #86afce;
-	outline-offset: 4px;
 }
 
 img {
 	display: block;
 	max-width: 100%;
+}
+
+button {
+	font: inherit;
 }

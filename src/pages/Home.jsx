@@ -7,77 +7,55 @@ const socials = [
 	{
 		name: "Twitch",
 		icon: <IoLogoTwitch />,
+		url: "https://twitch.tv/",
 	},
 	{
 		name: "Twitter",
 		icon: <FiTwitter />,
+		url: "https://x.com/",
 	},
 	{
 		name: "TikTok",
 		icon: <PiTiktokLogo />,
+		url: "https://tiktok.com/@",
 	},
 	{
 		name: "Discord",
 		icon: <TbBrandDiscord />,
+		url: "https://discord.gg/",
 	},
 ];
 
 const Home = () => {
 	return (
-		<div className="min-h-screen bg-degraded1 flex items-center justify-center px-4 py-8">
-			<div className="w-full max-w-4xl bg-white border-[3px] border-black rounded-md shadow-[10px_10px_0px_#000] overflow-hidden">
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-6 sm:p-8 lg:p-12">
-					<div className="flex flex-col items-center md:items-start text-center md:text-left">
+		<div className="min-h-screen bg-degraded1 flex items-center justify-center px-5 py-8">
+			<div className="card-main">
+				<div className="card-content">
+					<div className="profile-section">
 						<img
 							src="/pfpAylin.jpg"
 							alt="AylinZero"
-							className="w-28 sm:w-36 md:w-40 rounded-full border-[3px] border-black object-cover shadow-[5px_5px_0px_#86afce]"
+							className="profile-image"
 						/>
 
-						<h1 className="PlaywriteID mt-6 text-4xl sm:text-5xl lg:text-6xl">
-							@AylinZero
-						</h1>
+						<h1 className="PlaywriteID profile-title">@AylinZero</h1>
 
-						<p className="Caveat-Brush mt-5 max-w-md text-xl sm:text-2xl leading-relaxed text-neutral-700">
+						<p className="Caveat-Brush profile-description">
 							Hallo, soy Aylin ꒰｡ര ᎑ ര｡ ꒱ tu vtuber con energía infinita y
 							mucha torpeza, hablo mucho y grito de vez en cuando. Si no me das
 							tu follow te morderé. 🐻‍❄️🌨️
 						</p>
 					</div>
 
-					<div className="flex flex-col justify-center gap-4">
+					<div className="socials-section">
 						{socials.map((social) => (
 							<button
 								key={social.name}
 								type="button"
-								className="
-								group
-								w-full
-								bg-[#edf7ff]
-								border-[3px]
-								border-black
-								rounded-md
-								shadow-[6px_6px_0px_#86afce]
-								hover:translate-x-1.5
-								hover:translate-y-1.5
-								hover:shadow-none
-								transition-all
-								duration-200
-								py-3
-								sm:py-4
-								text-2xl
-								sm:text-3xl
-								md:text-4xl
-								Caveat-Brush
-								flex
-								items-center
-								justify-center
-								gap-4
-								cursor-pointer
-								select-none
-								"
+								className="social-button Caveat-Brush"
+								onClick={() => window.open(social.url, "_blank")}
 							>
-								<span className="text-3xl md:text-4xl">{social.icon}</span>
+								<span className="social-icon">{social.icon}</span>
 
 								{social.name}
 							</button>
@@ -85,7 +63,7 @@ const Home = () => {
 					</div>
 				</div>
 
-				<div className="h-5 bg-[#86afce] border-t-[3px] border-black" />
+				<div className="bottom-bar" />
 			</div>
 		</div>
 	);
