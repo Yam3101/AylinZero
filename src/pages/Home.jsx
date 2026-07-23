@@ -80,7 +80,8 @@ const Home = () => {
 									gap-4
 									Caveat-Brush
 									cursor-pointer
-									w-9/10
+									sm:w-9/10
+									w-full
 								"
 							>
 								<span className="text-xl duration-200">{social.icon}</span>
