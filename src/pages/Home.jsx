@@ -72,7 +72,7 @@ const Home = () => {
 									duration-200
 									sm:text-3xl
 									text-2xl
-									py-3
+									py-3.5
 									rounded-md
 									flex
 									items-center
