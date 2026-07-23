@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-.bg-degraded1 {
-	background: linear-gradient(to right, #b1e1e9, #f2e4f9);
-}
-
 @font-face {
 	font-family: "Caveat-Brush";
 	src: url("/fonts/CaveatBrush-Regular.woff2") format("woff2");
@@ -23,16 +19,13 @@
 }
 
 .Caveat-Brush {
-	/* biome-ignore lint/a11y/useGenericFontNames: <explanation> */
 	font-family: "Caveat-Brush";
 }
 
 .PlaywriteID {
-	/* biome-ignore lint/a11y/useGenericFontNames: <explanation> */
 	font-family: "PlaywriteID";
 }
 
 .ReenieBeanie {
-	/* biome-ignore lint/a11y/useGenericFontNames: <explanation> */
 	font-family: "ReenieBeanie";
 }
