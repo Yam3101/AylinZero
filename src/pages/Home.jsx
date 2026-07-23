@@ -7,55 +7,71 @@ const socials = [
 	{
 		name: "Twitch",
 		icon: <IoLogoTwitch />,
-		url: "https://twitch.tv/",
 	},
 	{
 		name: "Twitter",
 		icon: <FiTwitter />,
-		url: "https://x.com/",
 	},
 	{
 		name: "TikTok",
 		icon: <PiTiktokLogo />,
-		url: "https://tiktok.com/@",
 	},
 	{
 		name: "Discord",
 		icon: <TbBrandDiscord />,
-		url: "https://discord.gg/",
 	},
 ];
 
 const Home = () => {
 	return (
-		<div className="min-h-screen bg-degraded1 flex items-center justify-center px-5 py-8">
-			<div className="card-main">
-				<div className="card-content">
-					<div className="profile-section">
+		<div className="min-h-screen bg-degraded1 flex justify-center items-center px-6 py-10">
+			<div className="bg-white border-4 border-black shadow-[10px_10px_0px_#000] rounded-md w-full max-w-5xl overflow-hidden">
+				<div className="grid md:grid-cols-2 gap-12 p-10">
+					<div className="flex flex-col justify-center">
 						<img
 							src="/pfpAylin.jpg"
 							alt="AylinZero"
-							className="profile-image"
+							className="w-40 rounded-full object-cover border-3 border-black shadow-[5px_5px_0px_#86afce]"
 						/>
 
-						<h1 className="PlaywriteID profile-title">@AylinZero</h1>
+						<h1 className="sm:text-3xl text-2xl font-black mt-8 PlaywriteID">
+							@AylinZero
+						</h1>
 
-						<p className="Caveat-Brush profile-description">
+						<p className="mt-6 text-2xl leading-8 text-neutral-700 max-w-md Caveat-Brush">
 							Hallo, soy Aylin ꒰｡ര ᎑ ര｡ ꒱ tu vtuber con energía infinita y
-							mucha torpeza, hablo mucho y grito de vez en cuando. Si no me das
+							mucha torpeza, hablo mucho y grito de vez en cuando, si no me das
 							tu follow te morderé. 🐻‍❄️🌨️
 						</p>
 					</div>
 
-					<div className="socials-section">
+					<div className="flex flex-col justify-center gap-5">
 						{socials.map((social) => (
+							// biome-ignore lint/a11y/useButtonType: <explanation>
 							<button
 								key={social.name}
-								type="button"
-								className="social-button Caveat-Brush"
-								onClick={() => window.open(social.url, "_blank")}
+								className="
+								group
+								bg-[#edf7ff]
+								border-[3px]
+								border-black
+								shadow-[6px_6px_0px_#86afce]
+								hover:translate-x-1
+								hover:translate-y-1
+								hover:shadow-none
+								duration-200
+								sm:text-4xl
+								text-3xl
+								py-5
+								rounded-md
+								flex
+								items-center
+								justify-center
+								gap-4
+								Caveat-Brush
+								"
 							>
-								<span className="social-icon">{social.icon}</span>
+								<span className="text-3xl duration-200">{social.icon}</span>
 
 								{social.name}
 							</button>
@@ -63,7 +79,7 @@ const Home = () => {
 					</div>
 				</div>
 
-				<div className="bottom-bar" />
+				<div className="h-5 bg-[#86afce] border-t-4 border-black" />
 			</div>
 		</div>
 	);
