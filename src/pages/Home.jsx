@@ -25,7 +25,7 @@ const socials = [
 const Home = () => {
 	return (
 		<div className="min-h-screen bg-degraded1 flex justify-center items-center px-6 py-10">
-			<div className="bg-white border-4 border-black shadow-[10px_10px_0px_#000] rounded-md w-full max-w-5xl overflow-hidden">
+			<div className="bg-white border-3 border-black shadow-[10px_10px_0px_#000] rounded-md w-full max-w-5xl overflow-hidden">
 				<div className="grid md:grid-cols-2 gap-12 p-10">
 					<div className="flex flex-col justify-center">
 						<img
@@ -33,10 +33,7 @@ const Home = () => {
 							alt="AylinZero"
 							className="w-40 rounded-full object-cover border-3 border-black shadow-[5px_5px_0px_#86afce]"
 						/>
-
-						<h1 className="sm:text-3xl text-2xl font-black mt-8 PlaywriteID">
-							@AylinZero
-						</h1>
+						<h1 className="sm:text-6xl text-2xl mt-8 yellowtail">@AylinZero</h1>
 
 						<p className="mt-6 text-2xl leading-8 text-neutral-700 max-w-md Caveat-Brush">
 							Hallo, soy Aylin ꒰｡ര ᎑ ര｡ ꒱ tu vtuber con energía infinita y
@@ -47,6 +44,7 @@ const Home = () => {
 
 					<div className="flex flex-col justify-center gap-5">
 						{socials.map((social) => (
+							// biome-ignore lint/a11y/useButtonType: <explanation>
 							<button
 								key={social.name}
 								className="
@@ -78,7 +76,7 @@ const Home = () => {
 					</div>
 				</div>
 
-				<div className="h-5 bg-[#86afce] border-t-4 border-black"></div>
+				<div className="h-5 bg-[#86afce] border-t-4 border-black" />
 			</div>
 		</div>
 	);
