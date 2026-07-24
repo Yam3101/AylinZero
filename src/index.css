@@ -22,6 +22,17 @@
 	font-display: swap;
 }
 
+@font-face {
+	font-family: "Teachers";
+	src: url("/fonts/Teachers-VariableFont_wght.woff2") format("woff2");
+	font-display: swap;
+}
+
+.Teachers {
+	/* biome-ignore lint/a11y/useGenericFontNames: <explanation> */
+	font-family: "Teachers";
+}
+
 .Caveat-Brush {
 	/* biome-ignore lint/a11y/useGenericFontNames: <explanation> */
 	font-family: "Caveat-Brush";
