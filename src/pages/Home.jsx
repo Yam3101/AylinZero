@@ -25,7 +25,7 @@ const Home = () => {
 					))}
 				</div>
 
-				<footer className="italic">@AylinZero · 2026</footer>
+				<footer className="italic">@AylinZero | by Yam · 2026</footer>
 			</div>
 		</div>
 	);
